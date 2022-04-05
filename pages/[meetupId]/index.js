@@ -1,13 +1,11 @@
-const meetupDetails = () =>{
+import MeetupDetail from "../../components/meetups/MeetupDetail";
 
-    return<>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Stadtbild_M%C3%BCnchen.jpg" alt="location" />
-    <h1>A first meetup</h1>
-    <address>some address</address>
-    <p>The meetup description</p>
+const meetupDetails = () => {
+  return (
+    <>
+      <MeetupDetail  />
     </>
-
-
-}
+  );
+};
 
 export default meetupDetails;
