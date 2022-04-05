@@ -1,5 +1,5 @@
 import MeetupList from "../components/meetups/MeetupList";
-import Layout from "../components/layout/layout";
+
 
 const DummyMeetups = [
   {id:"m1",
@@ -17,7 +17,7 @@ description:"this is our second meetup!"}
 
 const HomePage = () => {
   return(
-    <Layout><MeetupList meetups={DummyMeetups}/></Layout>
+    <MeetupList meetups={DummyMeetups}/>
   )
 }
 
