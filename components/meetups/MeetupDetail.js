@@ -1,22 +1,19 @@
+import classes from './MeetupDetail.module.css';
 import { useRouter } from "next/router";
 import DummyMeetups from "../../data/meetup.data";
 
 const MeetupDetail = () => {
   const router = useRouter();
 
-  console.log(router.query.meetupId); //the clicked id
-
   let clickedPlaceId = router.query.meetupId;
-
-  console.log(DummyMeetups);
 
   let clickedData = DummyMeetups.filter((data) => {
     return data.id === clickedPlaceId;
   });
 
-  console.log(clickedData)
+
   return(
-      <>
+      <section className={classes.detail} >
     {clickedData.map(({ image, address, title, description, id }) => {
         return (<>
             <img src={image} alt={title} />
@@ -27,7 +24,7 @@ const MeetupDetail = () => {
         );
       })
     }
-    </>
+    </section>
 
   )
 };
